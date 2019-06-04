@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="samplemanageguodujksModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="仪器设备表">
+          <Key>
+            <PropertyRef Name="编号" />
+          </Key>
+          <Property Name="仪器名称" Type="nvarchar" MaxLength="50" />
+          <Property Name="仪器编号" Type="nvarchar" MaxLength="50" />
+          <Property Name="型号规格" Type="nvarchar" MaxLength="50" />
+          <Property Name="校准日期" Type="smalldatetime" />
+          <Property Name="有效期至" Type="smalldatetime" />
+          <Property Name="精度等级" Type="nvarchar" MaxLength="250" />
+          <Property Name="制造厂商" Type="nvarchar" MaxLength="50" />
+          <Property Name="出厂日期" Type="nvarchar" MaxLength="30" />
+          <Property Name="检定单位" Type="nvarchar" MaxLength="50" />
+          <Property Name="出厂编号" Type="nvarchar" MaxLength="50" />
+          <Property Name="检定证书号" Type="nvarchar" MaxLength="50" />
+          <Property Name="计量检定情况" Type="nvarchar" MaxLength="50" />
+          <Property Name="检定单价" Type="money" />
+          <Property Name="机器号" Type="nvarchar" MaxLength="50" />
+          <Property Name="停用" Type="bit" Nullable="false" />
+          <Property Name="使用科室" Type="nvarchar" MaxLength="50" />
+          <Property Name="编号" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="保管人" Type="nvarchar" MaxLength="20" />
+          <Property Name="检定周期" Type="nvarchar" MaxLength="30" />
+          <Property Name="包含仪器" Type="nvarchar" MaxLength="50" />
+          <Property Name="备注" Type="nvarchar" MaxLength="50" />
+          <Property Name="价格" Type="money" />
+          <Property Name="启用时间" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="samplemanageguodujksModelStoreContainer">
+          <EntitySet Name="仪器设备表" EntityType="Self.仪器设备表" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="samplemanageguodujksModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="仪器设备表">
+          <Key>
+            <PropertyRef Name="编号" />
+          </Key>
+          <Property Name="仪器名称" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="仪器编号" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="型号规格" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="校准日期" Type="DateTime" Precision="0" />
+          <Property Name="有效期至" Type="DateTime" Precision="0" />
+          <Property Name="精度等级" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="制造厂商" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="出厂日期" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="检定单位" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="出厂编号" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="检定证书号" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="计量检定情况" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="检定单价" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="机器号" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="停用" Type="Boolean" Nullable="false" />
+          <Property Name="使用科室" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="编号" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="保管人" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="检定周期" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="包含仪器" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="备注" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="价格" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="启用时间" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="samplemanageguodujksEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="仪器设备表" EntityType="Self.仪器设备表" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="samplemanageguodujksModelStoreContainer" CdmEntityContainer="samplemanageguodujksEntities1">
+          <EntitySetMapping Name="仪器设备表">
+            <EntityTypeMapping TypeName="samplemanageguodujksModel.仪器设备表">
+              <MappingFragment StoreEntitySet="仪器设备表">
+                <ScalarProperty Name="仪器名称" ColumnName="仪器名称" />
+                <ScalarProperty Name="仪器编号" ColumnName="仪器编号" />
+                <ScalarProperty Name="型号规格" ColumnName="型号规格" />
+                <ScalarProperty Name="校准日期" ColumnName="校准日期" />
+                <ScalarProperty Name="有效期至" ColumnName="有效期至" />
+                <ScalarProperty Name="精度等级" ColumnName="精度等级" />
+                <ScalarProperty Name="制造厂商" ColumnName="制造厂商" />
+                <ScalarProperty Name="出厂日期" ColumnName="出厂日期" />
+                <ScalarProperty Name="检定单位" ColumnName="检定单位" />
+                <ScalarProperty Name="出厂编号" ColumnName="出厂编号" />
+                <ScalarProperty Name="检定证书号" ColumnName="检定证书号" />
+                <ScalarProperty Name="计量检定情况" ColumnName="计量检定情况" />
+                <ScalarProperty Name="检定单价" ColumnName="检定单价" />
+                <ScalarProperty Name="机器号" ColumnName="机器号" />
+                <ScalarProperty Name="停用" ColumnName="停用" />
+                <ScalarProperty Name="使用科室" ColumnName="使用科室" />
+                <ScalarProperty Name="编号" ColumnName="编号" />
+                <ScalarProperty Name="保管人" ColumnName="保管人" />
+                <ScalarProperty Name="检定周期" ColumnName="检定周期" />
+                <ScalarProperty Name="包含仪器" ColumnName="包含仪器" />
+                <ScalarProperty Name="备注" ColumnName="备注" />
+                <ScalarProperty Name="价格" ColumnName="价格" />
+                <ScalarProperty Name="启用时间" ColumnName="启用时间" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -19,7 +19,10 @@ namespace spring.net_Demo
             Console.WriteLine(userInfo.ShowMss());
 
             Console.Read();
+
+
             
+
         }
     }
 }
