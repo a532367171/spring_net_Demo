@@ -11,6 +11,7 @@ namespace spring.net_Demo
     {
         static void Main(string[] args)
         {
+
             IApplicationContext ctx = ContextRegistry.GetContext();
 
             IUserInfo userInfo = (IUserInfo)ctx.GetObject("UserInfo");
